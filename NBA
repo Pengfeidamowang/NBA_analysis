@@ -1,0 +1,11 @@
+import goldsberry
+import pandas as pd
+players = goldsberry.PlayerList(season='2016-17')
+players = players.players()
+players = pd.DataFrame(players2015)
+number_of_players = len(players)
+hou = players.TEAM_ABBREVIATION == 'HOU'
+name_id = players.loc[hou,['DISPLAY_FIRST_LAST','PERSON_ID']]
+names = players['DISPLAY_FIRST_LAST']
+curry = names.str.contains('Curry')
+data_curry = players.loc[curry,['DISPLAY_FIRST_LAST','PERSON_ID']]
